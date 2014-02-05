@@ -10,6 +10,6 @@ rake db:migrate
 
 sudo npm install -g karma
 sudo npm install -g karma-ng-scenario
-karma start spec/javascripts/restauranteur.conf.js
+karma start spec/javascripts/blog.conf.js
 
 http://localhost:9876/

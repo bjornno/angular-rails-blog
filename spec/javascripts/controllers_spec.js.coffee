@@ -1,11 +1,9 @@
 describe "Blog controllers", ->
   beforeEach module("Blog")
 
-  describe "TestCtrl", ->
-    it "should have no data", inject(($controller) ->
+
+  describe "EditPostCtrl", ->
+    it "should have bar in foo", -> 
       scope = {}
-      ctrl = $controller("TestCtrl",
-        $scope: scope
-      )
+      ctrl = EditPostCtrl(scope)   
       expect(scope.foo).toBe "bar"
-    )

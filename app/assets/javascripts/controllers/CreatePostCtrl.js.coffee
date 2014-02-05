@@ -15,6 +15,7 @@
 
   $scope.createPost = ->
     postData.createPost($scope.formData)
+    $location.url('/')
 
   $scope.clearPost = ->
     $scope.formData.newPostTitle = ''
