@@ -1,5 +1,5 @@
-describe "R controllers", ->
-  #beforeEach module("???")
+describe "Blog controllers", ->
+  beforeEach module("Blog")
 
   describe "TestCtrl", ->
     it "should have no data", inject(($controller) ->
