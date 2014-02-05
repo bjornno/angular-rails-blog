@@ -3,8 +3,8 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 #= require_self
-#= require_tree ./Controllers/main
-#= require_tree ./Services/main
+#= require_tree ./controllers
+#= require_tree ./services
 
 # Creates new Angular module called 'Blog'
 Blog = angular.module('Blog', [])

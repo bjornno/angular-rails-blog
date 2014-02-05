@@ -1,11 +1,11 @@
 describe "R controllers", ->
   #beforeEach module("???")
 
-  describe "PostCtrl", ->
-    it "should ...", inject(($controller) ->
+  describe "TestCtrl", ->
+    it "should have no data", inject(($controller) ->
       scope = {}
-      ctrl = $controller("PostCtrl",
+      ctrl = $controller("TestCtrl",
         $scope: scope
       )
-      expect(scope.data.length).toBe 0
+      expect(scope.foo).toBe "bar"
     )
