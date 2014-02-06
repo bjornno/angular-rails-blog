@@ -11,6 +11,10 @@
   $scope.navNewPost = ->
     $location.url('/post/new')
 
+  $scope.deletePost = ->
+    postData.deletePost($scope.data.postId)
+    $location.url('/')
+
   $scope.navHome = ->
     $location.url('/')
 

@@ -13,6 +13,13 @@ class PostsController < ApplicationController
 
   end
 
+  def show
+    post = Post.find(params[:id])
+      respond_with(post) do |format|
+        format.json { render :json => post.as_json }
+      end
+  end  
+
   def create
 
     # Create and save new post from data received from the client
@@ -34,5 +41,13 @@ class PostsController < ApplicationController
     end
     
   end
+
+  def destroy
+    post = Post.find(params[:id])
+    post.destroy
+   
+    redirect_to action: 'index', status: 204
+  end
+  
 
 end

@@ -48,6 +48,11 @@ angular.module('Blog').factory('postData', ['$http', ($http) ->
 
     return true
 
+  postData.deletePost = (id) -> 
+    $http.delete('./posts/'+id) 
+    postData.isLoaded = false
+    
+   
   return postData
 
 ])

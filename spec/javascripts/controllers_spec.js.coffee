@@ -2,8 +2,8 @@ describe "Blog controllers", ->
   beforeEach module("Blog")
 
 
-  describe "EditPostCtrl", ->
+  describe "FooCtrl", ->
     it "should have bar in foo", -> 
       scope = {}
-      ctrl = EditPostCtrl(scope)   
+      ctrl = FooCtrl(scope)   
       expect(scope.foo).toBe "bar"
