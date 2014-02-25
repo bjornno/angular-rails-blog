@@ -39,3 +39,8 @@ gem 'jbuilder', '~> 1.0.1'
 # gem 'debugger'
 
 gem "rspec-rails", "~> 2.14.0"
+
+#gem "autotest-standalone"
+gem "autotest-rails"
+gem "autotest-growl"
+gem "autotest-fsevent"

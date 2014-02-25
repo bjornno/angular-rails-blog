@@ -45,8 +45,10 @@ class PostsController < ApplicationController
   def destroy
     post = Post.find(params[:id])
     post.destroy
-   
-    redirect_to action: 'index', status: 204
+    respond_with(post) do |format|
+      format.json { render :json => post.as_json }
+    end
+#    redirect_to action: 'index', status: 204
   end
   
 
