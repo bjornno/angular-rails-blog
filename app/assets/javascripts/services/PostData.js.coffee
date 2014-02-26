@@ -50,12 +50,11 @@ angular.module('Blog').factory('postData', ['$http', ($http) ->
 
   postData.deletePost = (id) -> 
     $http.delete('./posts/'+id).success( (data) ->
-      postData.isLoaded = false
       console.log('Successfully deleted post')
     ).error( ->
       console.error('Failed to delete post')
     ) 
-    # show index page
+    postData.isLoaded = false
     
   return postData
 ])
