@@ -41,7 +41,6 @@ gem 'jbuilder', '~> 1.0.1'
 gem "rspec-rails", "~> 2.14.0"
 gem 'capybara'
 gem 'selenium-webdriver'
-gem 'capybara-webkit'
 
 #gem "autotest-standalone"
 gem "autotest-rails"
