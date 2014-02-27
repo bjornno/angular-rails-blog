@@ -12,9 +12,9 @@
   <form>
     <fieldset>
       <label><strong>Title</strong></label>
-      <input class="span12" ng-model="formData.newPostTitle" placeholder="New Post" type="text" maxlength="250">
+      <input id="title" class="span12" ng-model="formData.newPostTitle" placeholder="New Post" type="text" maxlength="250">
       <label><strong>Body</strong></label>
-      <textarea class="span12" style="height: 250px" ng-model="formData.newPostContents" placeholder="Type your post here..."></textarea>
+      <textarea id="contents" class="span12" style="height: 250px" ng-model="formData.newPostContents" placeholder="Type your post here..."></textarea>
       <button class="btn btn-primary" ng-click="createPost()">Create</button>
       <button class="btn btn-danger pull-right" ng-click="clearPost()">Clear post</button>
     </fieldset>

@@ -2,7 +2,7 @@
   <div class="navbar-inner">
     <a href="#" class="brand">blog</a>
     <ul class="nav pull-right">
-      <li><a ng-click="navNewPost()">new post</a></li>
+      <li><button ng-click="navNewPost()">new post</button></li>
     </ul>
   </div>
 </div>
@@ -10,7 +10,7 @@
 <div class="container" style="margin-top: 40px">
   <h1 class="text-center">Posts</h1>
   <div class="row" ng-repeat="post in data.posts">
-    <h2><a ng-click="viewPost(post.id)">{{post.title}}</a></h2>
+    <h2><button ng-click="viewPost(post.id)">{{post.title}}</button></h2>
     <p>{{post.contents}}</p>
   </div>
 </div>
