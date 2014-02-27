@@ -2,9 +2,11 @@ require 'spec_helper'
 
 Capybara.default_driver = :selenium
 describe 'smoketest' do
+#	before { pending "Excluded running features as they run in browser"}
+
   it 'creates a blog post' do
     visit '/'
-    page.should have_title('Blog')
+		page.should have_title('Blog')
     click_on 'new post'
     expect(page).to have_content 'Create new post'
     fill_in 'title', with: 'blog title'
