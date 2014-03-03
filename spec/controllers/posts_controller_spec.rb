@@ -3,6 +3,7 @@ require 'spec_helper'
 describe PostsController do
   describe "GET index" do
     it "renders posts as json" do
+      current_user = {}
     	post_data = {title: "foo", contents: "bar"}
       team = Post.create post_data
       get :index, :format => :json

@@ -4,7 +4,9 @@ class PostsController < ApplicationController
   before_filter :authenticate
 
   def authenticate
-    redirect_to :login unless User.find_by_provider_and_uid(auth["provider"], auth["uid"])
+    if Rails.env == 'production'
+      redirect_to :login unless current_user
+    end
   end
 
   def index
