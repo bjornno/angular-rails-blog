@@ -1,14 +1,6 @@
 class PostsController < ApplicationController
   respond_to :json
 
-  before_filter :authenticate
-
-  def authenticate
-    if Rails.env == 'production'
-      redirect_to :signin unless user_signed_in?
-    end
-  end
-
   def index
 
     # Gather all post data
