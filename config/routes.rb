@@ -3,8 +3,8 @@ Blog::Application.routes.draw do
 
   resources :posts
 
-  match 'signin' => 'sessions#new', :as => :signin, via: [:get, :post]
-  #match 'login', to: redirect('/auth/facebook'), as: 'login', via: [:get, :post]
+  #match 'login' => 'sessions#new', :as => :login, via: [:get, :post]
+  match 'signin', to: redirect('/auth/facebook'), as: 'signin', via: [:get, :post]
   match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
   match 'auth/failure', to: redirect('/'), via: [:get, :post]
   match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
