@@ -1,6 +1,12 @@
 class PostsController < ApplicationController
   respond_to :json
 
+  before_filter :authenticate
+
+  def authenticate
+    redirect_to :login unless User.find_by_provider_and_uid(auth["provider"], auth["uid"])
+  end
+
   def index
 
     # Gather all post data
