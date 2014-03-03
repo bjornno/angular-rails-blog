@@ -5,7 +5,7 @@ class PostsController < ApplicationController
 
   def authenticate
     if Rails.env == 'production'
-      redirect_to :login unless current_user
+      redirect_to :login unless @current_user
     end
   end
 
