@@ -9,7 +9,7 @@
 
   $scope.navNewPost = ->
     $location.url('/post/new')
-
+ 
   $scope.navHome = ->
     $location.url('/')
 
