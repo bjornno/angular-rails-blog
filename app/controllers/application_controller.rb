@@ -11,8 +11,8 @@ class ApplicationController < ActionController::Base
   private
   def verify_logged_in
     if Rails.env == 'production'
-      head :forbidden unless user_signed_in?
-    end
+      head :unauthorized unless user_signed_in?
+    end	
   end
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
