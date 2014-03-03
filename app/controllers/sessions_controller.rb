@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-	skip_before_filter :user_signed_in
+	skip_before_filter :verify_logged_in
 
   def create
     user = User.from_omniauth(env["omniauth.auth"])
