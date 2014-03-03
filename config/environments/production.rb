@@ -25,4 +25,3 @@ Blog::Application.configure do
   # Debug mode disables concatenation and preprocessing of assets.
   config.assets.debug = true
 end
-OmniAuth.config.logger = Rails.logger
