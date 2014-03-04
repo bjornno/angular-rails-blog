@@ -2,7 +2,7 @@ rvm use ruby-1.9.3-p385@blog --create --rvmrc
 
 brew install postgresql
 start the db server
-createuser -P -s -e db_user
+createuser -P -s -e pguser
 
 bundle install
 rake db:create

@@ -10,8 +10,8 @@ class ApplicationController < ActionController::Base
 
   private
   def verify_logged_in
-    if Rails.env == 'production'
-      head :unauthorized unless user_signed_in?
+    unless Rails.env == 'test'
+    	render(:file => "public/401", :status => :unauthorized, :layout => false) unless user_signed_in?
     end	
   end
   def current_user
