@@ -2,6 +2,7 @@ Blog::Application.routes.draw do
   root to: 'main#index'
 
   resources :posts
+  resources :events
 
   match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
   match 'auth/failure', to: redirect('/'), via: [:get, :post]

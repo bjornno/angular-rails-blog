@@ -28,6 +28,9 @@ gem 'jbuilder', '~> 1.0.1'
 
 gem "twitter-bootstrap-rails"
 
+gem 'httparty'
+gem 'nokogiri'
+
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 gem "omniauth-google-oauth2"
@@ -51,4 +54,3 @@ gem 'selenium-webdriver'
 #gem "autotest-standalone"
 gem "autotest-rails"
 gem "autotest-growl"
-gem "autotest-fsevent"
