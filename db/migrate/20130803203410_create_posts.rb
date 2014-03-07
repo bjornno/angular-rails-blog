@@ -3,6 +3,7 @@ class CreatePosts < ActiveRecord::Migration
     create_table :posts do |t|
       t.string :title
       t.text :contents
+      t.string  :position, limit: 1024
       t.string :author
       t.datetime :post_date
 

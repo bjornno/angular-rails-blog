@@ -2,7 +2,7 @@ angular.module('Blog').factory('postData', ['$http', ($http) ->
 
   postData =
     data:
-      posts: [{title: 'Loading', contents: ''}]
+      posts: [{title: 'Loading', contents: '', position: ''}]
     isLoaded: false
 
   postData.loadPosts = (deferred) ->
@@ -23,7 +23,7 @@ angular.module('Blog').factory('postData', ['$http', ($http) ->
         deferred.resolve()
 
 
-  postData.createPost = (newPost) ->
+  postData.createPost = (newPost, position) ->
     # Client-side data validation
     if newPost.newPostTitle == '' or newPost.newPostContents == ''
       alert('Neither the Title nor the Body are allowed to be left blank.')
@@ -34,6 +34,7 @@ angular.module('Blog').factory('postData', ['$http', ($http) ->
       new_post:
         title: newPost.newPostTitle
         contents: newPost.newPostContents
+        position: position
 
     # Do POST request to /posts.json
     $http.post('./posts.json', data).success( (data) ->

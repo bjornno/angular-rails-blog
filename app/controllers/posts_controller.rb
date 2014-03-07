@@ -26,6 +26,7 @@ class PostsController < ApplicationController
     new_post = Post.new
     new_post.title = params[:new_post][:title][0...250] # Get only first 250 characters
     new_post.contents = params[:new_post][:contents]
+    new_post.position = params[:new_post][:position]
 
     # Confirm post is valid and save or return HTTP error
     if new_post.valid?

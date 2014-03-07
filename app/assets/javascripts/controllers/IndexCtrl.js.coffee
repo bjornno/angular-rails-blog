@@ -1,4 +1,4 @@
-@IndexCtrl = ($scope, $location, $http, postData) ->
+@IndexCtrl = ($scope, $q, $location, $http, postData) ->
 
   $scope.data = postData.data
 
@@ -10,4 +10,4 @@
   $scope.navNewPost = ->
     $location.url('/post/new')
 
-@IndexCtrl.$inject = ['$scope', '$location', '$http', 'postData']
+@IndexCtrl.$inject = ['$scope', '$q', '$location', '$http', 'postData']

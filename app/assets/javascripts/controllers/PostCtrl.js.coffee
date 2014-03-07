@@ -5,6 +5,7 @@
     currentPost:
       title: 'Loading...'
       contents: ''
+      position: ''
 
   $scope.data.postId = $routeParams.postId
 
@@ -24,6 +25,7 @@
     post = _.findWhere(postData.data.posts, { id: parseInt($scope.data.postId) })
     $scope.data.currentPost.title = post.title
     $scope.data.currentPost.contents = post.contents
+    $scope.data.currentPost.position = post.position
 
   # Create promise to be resolved after posts load
   @deferred = $q.defer()

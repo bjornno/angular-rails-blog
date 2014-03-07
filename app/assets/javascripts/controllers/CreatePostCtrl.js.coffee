@@ -1,4 +1,7 @@
-@CreatePostCtrl = ($scope, $location, postData) ->
+@CreatePostCtrl = ($scope, $location, postData, LocationService) ->
+
+  LocationService.locate().then (position) ->
+    $scope.position = position
 
   $scope.data = postData.data
   postData.loadPosts(null)
@@ -14,7 +17,9 @@
     $location.url('/')
 
   $scope.createPost = ->
-    postData.createPost($scope.formData)
+    console.log("in create")
+    console.log($scope.position)
+    postData.createPost($scope.formData, $scope.position)
     $location.url('/')
 
   $scope.clearPost = ->
@@ -22,4 +27,4 @@
     $scope.formData.newPostContents = ''
 
 
-@CreatePostCtrl.$inject = ['$scope', '$location', 'postData']
+@CreatePostCtrl.$inject = ['$scope', '$location', 'postData', 'LocationService']

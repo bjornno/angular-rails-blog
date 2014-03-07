@@ -11,6 +11,7 @@
   <h1 class="text-center">{{data.currentPost.title}}</h1>
   <div class="row">
     <p>{{data.currentPost.contents}}</p>
+    <p>Posted from: {{data.currentPost.position.address}}</p>
   </div>
   <div class="row">
     <button class="btn btn-default" ng-click="deletePost()">Delete</button>

@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20140303093231) do
   create_table "posts", force: true do |t|
     t.string   "title"
     t.text     "contents"
+    t.string   "position",   limit: 1024
     t.string   "author"
     t.datetime "post_date"
     t.datetime "created_at"
