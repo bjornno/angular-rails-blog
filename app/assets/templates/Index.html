@@ -14,5 +14,6 @@
         <p>{{post.contents}}</p>
     </div>
 </div>
-
+{{data.currentPost.position.address}}
+<div ng-show="location">You are here: {{location.address}}</div>
 <div ng-show="distance">Distance to Oslo sentrum {{distance}} km</div>
