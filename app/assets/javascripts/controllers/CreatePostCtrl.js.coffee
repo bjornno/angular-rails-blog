@@ -17,7 +17,6 @@
     $location.url('/')
 
   $scope.createPost = ->
-    console.log("in create")
     console.log($scope.position)
     postData.createPost($scope.formData, $scope.position)
     $location.url('/')
