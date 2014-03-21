@@ -13,3 +13,9 @@ sudo npm install -g karma-ng-scenario
 karma start spec/javascripts/blog.conf.js
 
 http://localhost:9876/
+
+
+
+# docker
+
+docker build -t blog .
