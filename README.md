@@ -18,4 +18,4 @@ http://localhost:9876/
 
 # docker
 
-docker build -t blog .
+docker build -t keep/blog-latest .
